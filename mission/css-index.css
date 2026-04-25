@@ -1,0 +1,79 @@
+body {
+  background-color: #f4f3f0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  font-family: Georgia, serif;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.card {
+  background: #ffffff;
+  max-width: 700px;
+  width: 100%;
+  padding: 56px 64px;
+  border: 1px solid #d0cdc8;
+}
+
+.card__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 14px 0;
+}
+
+.card__subtitle {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #005eb8;
+  margin: 0 0 14px 0;
+}
+
+.card__rule {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 0 32px 0;
+}
+
+.card__intro {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0 0 20px 0;
+}
+
+.card__lead-in {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0 0 16px 0;
+}
+
+.card__list {
+  padding-left: 20px;
+  margin: 0 0 40px 0;
+}
+
+.card__item {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.card__footer {
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding-top: 28px;
+}
+
+.logo__img {
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+  height: auto;
+}
