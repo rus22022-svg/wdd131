@@ -1,11 +1,29 @@
 body {
   background-color: #f4f3f0;
-  display: flex;
-  justify-content: center;
-  padding: 40px 16px;
   font-family: Georgia, serif;
   color: #1a1a1a;
   margin: 0;
+  padding: 0;
+}
+
+.theme-selector {
+  text-align: right;
+  padding: 12px 24px;
+}
+
+.theme-selector select {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 20px 16px 40px;
 }
 
 .card {
@@ -62,7 +80,6 @@ body {
   font-size: 1rem;
   line-height: 1.75;
   margin-bottom: 16px;
-  color: #333;
 }
 
 .card__footer {
@@ -76,4 +93,30 @@ body {
   margin: 0 auto;
   width: 140px;
   height: auto;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark .card {
+  background-color: #2c2c2c;
+  border-color: #444;
+}
+
+body.dark .card__subtitle {
+  color: #7ab3e8;
+}
+
+body.dark .card__rule,
+body.dark .card__footer {
+  border-top-color: #444;
+}
+
+body.dark .theme-selector select {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border-color: #555;
 }
