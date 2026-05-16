@@ -10,13 +10,19 @@
     <meta name="author" content="Your Name" />
     <title>Cool Pics 📷</title>
     <link rel="stylesheet" href="coolpics.css" />
+    <script src="coolpics.js" defer></script>
   </head>
   <body>
     <header>
       <div class="header-inner">
         <h1>Cool Pics 📷</h1>
 
-        <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation">
+        <button
+          id="menu-btn"
+          class="menu-btn"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
           Menu
         </button>
 
@@ -79,6 +85,25 @@
       <p>&copy;2025 Not a real site 😊</p>
     </footer>
 
-    <script src="coolpics.js"></script>
+    <div
+      id="modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-label="Image viewer"
+    >
+      <div class="modal-card">
+        <button
+          id="modal-close"
+          class="modal-close"
+          aria-label="Close image viewer"
+        >
+          &times;
+        </button>
+        <img id="modal-img" src="" alt="" />
+        <p id="modal-caption" class="modal-caption"></p>
+      </div>
+    </div>
   </body>
 </html>
