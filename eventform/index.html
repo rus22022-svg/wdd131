@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Ticket Form</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a1a2e'/><text y='22' x='4' font-size='20'>🎟️</text></svg>"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <main>
+        <div class="form-card">
+          <h1>Event Ticket</h1>
+
+          <form id="ticketForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  autocomplete="given-name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  autocomplete="family-name"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="attendeeType">Type</label>
+                <select id="attendeeType" name="attendeeType">
+                  <option value="">Choose one</option>
+                  <option value="student">Student</option>
+                  <option value="guest">Guest</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="eventDate">Event Date</label>
+                <input type="date" id="eventDate" name="eventDate" />
+              </div>
+            </div>
+
+            <!-- Hidden conditional section -->
+            <div class="form-group hidden" id="conditionalField">
+              <label for="accessCode" id="conditionalLabel">Student I#</label>
+              <input
+                type="text"
+                id="accessCode"
+                name="accessCode"
+                placeholder=""
+              />
+            </div>
+
+            <button type="submit" class="submit-btn">Create Ticket</button>
+          </form>
+          <div id="errorBox" class="error-box hidden" aria-live="polite"></div>
+
+          <!-- Ticket display -->
+          <div id="ticketDisplay" class="ticket hidden" aria-live="polite">
+            <h2>Your Ticket</h2>
+            <div class="ticket-body">
+              <div class="ticket-row">
+                <span class="ticket-label">Name</span><span id="t-name"></span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">Email</span
+                ><span id="t-email"></span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">Date</span><span id="t-date"></span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">Type</span><span id="t-type"></span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">ID / Code</span
+                ><span id="t-code"></span>
+              </div>
+            </div>
+            <p class="ticket-footer">See you there!</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="form.js"></script>
+  </body>
+</html>
