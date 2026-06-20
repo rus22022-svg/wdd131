@@ -1,0 +1,188 @@
+:root {
+  --ink: #1a1a1a;
+  --muted: #555;
+  --line: #d8d8d8;
+  --accent: #2e9bd6;
+  --star: #f4b400;
+  --bg: #ffffff;
+  --max: 1200px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Header / logo */
+.site-header { max-width: var(--max); margin: 0 auto; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 1rem 0;
+}
+
+.logo-icon {
+  width: 52px;
+  height: 52px;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Main */
+main { max-width: var(--max); margin: 0 auto; }
+
+/* Search */
+.search {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: .75rem;
+}
+
+.search input {
+  flex: 1;
+  border: 0;
+  padding: .7rem .9rem;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+}
+
+.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+.search button {
+  border: 0;
+  border-left: 1.5px solid var(--ink);
+  background: transparent;
+  padding: .45rem .8rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.search button svg { width: 24px; height: 24px; display: block; }
+
+/* Recipe card */
+.recipe-card {
+  border: 1.5px solid var(--ink);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.recipe-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.recipe-body { padding: 1rem; }
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  padding: .15rem .55rem;
+  font-size: .85rem;
+  margin: 0 0 .6rem;
+}
+
+.recipe-title {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.7rem;
+  margin: 0 0 .25rem;
+  letter-spacing: .5px;
+}
+
+.rating { font-size: 1.1rem; letter-spacing: 2px; margin-bottom: .6rem; }
+.star { color: var(--star); }
+.star:not(.filled) { color: var(--ink); }
+
+.recipe-desc { color: var(--muted); margin: 0; font-size: .95rem; }
+
+/* Footer */
+.site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  gap: .5rem;
+  padding: 0; margin: 0;
+}
+
+.socials a {
+  display: inline-flex;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.socials svg { width: 22px; height: 22px; display: block; }
+
+.attribution { margin: 0; font-size: .8rem; }
+.attribution a { color: var(--accent); }
+
+/* ---- Larger devices ---- */
+@media (min-width: 700px) {
+  body { padding: 2rem; }
+
+  .logo { gap: 1rem; padding: 1.5rem 0; }
+  .logo-icon { width: 84px; height: 84px; }
+  .logo-text { font-size: 4rem; }
+
+  .search input { padding: 1rem 1.25rem; font-size: 1.15rem; }
+  .search button { padding: .6rem 1.1rem; }
+  .search button svg { width: 30px; height: 30px; }
+
+  /* Card becomes horizontal */
+  .recipe-card { display: grid; grid-template-columns: 1fr 1fr; }
+  .recipe-img { height: 100%; aspect-ratio: auto; }
+  .recipe-body { padding: 1.5rem; }
+  .recipe-title { font-size: 2rem; }
+  .recipe-desc { font-size: 1rem; }
+
+  /* Footer: attribution left, socials right */
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
