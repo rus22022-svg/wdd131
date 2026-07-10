@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Plan - Habit Tracker</title>
+    <link rel="stylesheet" href="styles/site-plan.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Habit Tracker - App Plan</h1>
+      <p>WDD 131 Final Project</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Purpose and Audience</h2>
+        <p>
+          This app helps a person track daily habits, like drinking water or
+          reading, by letting them check off habits each day and see their
+          current streak.
+        </p>
+        <p>
+          The audience is students who want a simple way to build good habits
+          without using a big, complicated app.
+        </p>
+      </section>
+
+      <section>
+        <h2>Dynamic Elements (JavaScript)</h2>
+        <ul>
+          <li>
+            Each habit is stored as an <strong>object</strong>: name, streak,
+            and done or not.
+          </li>
+          <li>All habits are stored together in an <strong>array</strong>.</li>
+          <li>
+            Clicking "Done" on a habit updates that habit and re-shows the list
+            (DOM event).
+          </li>
+          <li>
+            An <strong>if/else</strong> checks whether the habit was already
+            done today.
+          </li>
+          <li>
+            <code>forEach()</code> is used to show each habit on the page.
+          </li>
+          <li>
+            <code>reduce()</code> is used to count how many habits are done
+            today.
+          </li>
+          <li>
+            The code is split into a few small functions instead of one big one.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Pseudocode</h2>
+        <pre><code>habits = [ { name, streak, done }, ... ]
+
+function showHabits():
+    for each habit in habits:
+        show habit name, streak, and a Done button
+    show total habits done today
+
+function markDone(habit):
+    if habit.done is false:
+        habit.done = true
+        habit.streak = habit.streak + 1
+    showHabits()
+
+function addHabit(name):
+    if name is not empty:
+        add new habit to habits array
+        showHabits()</code></pre>
+      </section>
+
+      <section>
+        <h2>Wireframe</h2>
+        <p>
+          Mobile-first layout. Everything is in one column and stacks top to
+          bottom.
+        </p>
+        <img
+          src="images/wireframe-mobile.svg"
+          alt="Simple wireframe of the habit tracker page showing header, streak summary, add button, and a list of habits"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <p>WDD 131 - App Plan</p>
+    </footer>
+  </body>
+</html>

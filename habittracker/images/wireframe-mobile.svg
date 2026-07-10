@@ -1,0 +1,40 @@
+<svg
+  viewBox="0 0 300 500"
+  xmlns="http://www.w3.org/2000/svg"
+  font-family="Arial, sans-serif"
+>
+  <rect width="300" height="500" fill="#fff" stroke="#333" stroke-width="2" />
+
+  <rect x="10" y="10" width="280" height="40" fill="none" stroke="#333" />
+  <text x="150" y="35" font-size="12" text-anchor="middle">Header / Title</text>
+
+  <rect x="10" y="60" width="280" height="50" fill="none" stroke="#333" />
+  <text x="150" y="90" font-size="12" text-anchor="middle">Streak summary</text>
+
+  <rect x="10" y="120" width="280" height="35" fill="none" stroke="#333" />
+  <text x="150" y="142" font-size="12" text-anchor="middle">
+    + Add habit button
+  </text>
+
+  <rect x="10" y="165" width="280" height="60" fill="none" stroke="#333" />
+  <text x="150" y="198" font-size="12" text-anchor="middle">
+    Habit 1 (name + Done button)
+  </text>
+
+  <rect x="10" y="235" width="280" height="60" fill="none" stroke="#333" />
+  <text x="150" y="268" font-size="12" text-anchor="middle">
+    Habit 2 (name + Done button)
+  </text>
+
+  <rect x="10" y="305" width="280" height="60" fill="none" stroke="#333" />
+  <text x="150" y="338" font-size="12" text-anchor="middle">
+    Habit 3 (name + Done button)
+  </text>
+
+  <rect x="10" y="450" width="280" height="40" fill="none" stroke="#333" />
+  <text x="150" y="474" font-size="12" text-anchor="middle">Footer</text>
+
+  <text x="150" y="502" font-size="11" text-anchor="middle" fill="#666">
+    Mobile layout - one column
+  </text>
+</svg>
