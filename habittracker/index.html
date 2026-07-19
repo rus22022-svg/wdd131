@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple habit tracker for students. Check off daily habits, build streaks, and see your progress for today."
+    />
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header-img"
+        src="images/growth.png"
+        alt="A small plant sprouting from soil, growing a little each day"
+        width="72"
+        height="72"
+      />
+      <div>
+        <h1>Habit Tracker</h1>
+        <p class="tagline">
+          Check off a habit each day and watch your streak grow.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary">
+        <h2>Today</h2>
+        <p class="summary-count" id="summary-count" aria-live="polite">
+          0 of 0 habits done
+        </p>
+        <div class="progress">
+          <span class="progress-fill" id="progress-fill"></span>
+        </div>
+      </section>
+
+      <section class="add-section">
+        <h2>Add a Habit</h2>
+        <form id="add-form">
+          <label for="habit-name">Habit name</label>
+          <div class="add-row">
+            <input
+              type="text"
+              id="habit-name"
+              name="habit-name"
+              class="add-input"
+              placeholder="e.g. Drink water"
+              autocomplete="off"
+              maxlength="40"
+              required
+            />
+            <button type="submit" class="add-button">Add</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="habits">
+        <h2>Your Habits</h2>
+        <ul id="habit-list" class="habit-list"></ul>
+        <p id="empty-note" class="empty-note" hidden>
+          No habits yet. Add one above to get started.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>WDD 131 &middot; Final Project</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
